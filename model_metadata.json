@@ -1,0 +1,83 @@
+{
+  "project_name": "Email Spam Detection NLP System",
+  "author": "Kalp Shah",
+  "best_model": "Linear SVM",
+  "vocab_size": 1835,
+  "metrics": {
+    "accuracy": 92.0,
+    "precision": 91.67,
+    "recall": 91.67,
+    "f1_score": 91.67,
+    "cv_accuracy": 95.0
+  },
+  "all_benchmarks": {
+    "Multinomial Naive Bayes": {
+      "accuracy": 88.0,
+      "precision": 84.62,
+      "recall": 91.67,
+      "f1_score": 88.0,
+      "cv_accuracy": 94.0
+    },
+    "Logistic Regression": {
+      "accuracy": 92.0,
+      "precision": 91.67,
+      "recall": 91.67,
+      "f1_score": 91.67,
+      "cv_accuracy": 96.0
+    },
+    "Linear SVM": {
+      "accuracy": 92.0,
+      "precision": 91.67,
+      "recall": 91.67,
+      "f1_score": 91.67,
+      "cv_accuracy": 95.0
+    }
+  },
+  "total_samples": 100,
+  "spam_samples": 50,
+  "ham_samples": 50,
+  "top_spam_indicators": [
+    "currency_amount",
+    "free",
+    "click",
+    "now",
+    "account",
+    "immediately",
+    "claim",
+    "to",
+    "urgent",
+    "details",
+    "congratulations",
+    "prize",
+    "luxury",
+    "you have",
+    "guaranteed",
+    "no",
+    "card",
+    "won",
+    "of",
+    "here to"
+  ],
+  "top_ham_indicators": [
+    "the",
+    "on",
+    "hi",
+    "kalp",
+    "for the",
+    "let",
+    "is",
+    "attached",
+    "hi kalp",
+    "please",
+    "me",
+    "hey",
+    "can",
+    "student",
+    "it",
+    "google",
+    "for",
+    "ml",
+    "yesterday",
+    "ai"
+  ]
+}
