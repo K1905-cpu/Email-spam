@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
           ${item.time}
         </td>
         <td style="font-weight: 500; max-width: 380px;">
-          <div style="color: #fff; font-weight: 600; font-size: 13.5px; margin-bottom: 2px;">
+          <div style="color: var(--text-primary); font-weight: 600; font-size: 13.5px; margin-bottom: 2px;">
             ${escapeHtml(item.fullSubject || "No Subject Line")}
           </div>
           <div style="color: var(--text-secondary); font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </td>
         <td>
           <span class="table-badge ${item.isSpam ? 'table-badge-spam' : 'table-badge-ham'}">
-            ${item.isSpam ? '🚨 SPAM' : '✅ CLEAN (HAM)'}
+            ${item.isSpam ? 'SPAM' : 'CLEAN (HAM)'}
           </span>
         </td>
         <td style="font-weight: 700; font-family: var(--font-mono); color: ${item.isSpam ? '#f87171' : '#34d399'};">
@@ -104,8 +104,8 @@ document.addEventListener("DOMContentLoaded", () => {
           <button type="button" class="btn-table-retest" data-id="${item.id}" title="Load this email back into the Detector">
             Retest
           </button>
-          <button type="button" class="btn-table-delete" data-id="${item.id}" title="Remove this record" style="margin-left: 6px; background: transparent; border: 1px solid rgba(255,255,255,0.1); color: var(--text-muted); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 11px; cursor: pointer;">
-            ✕
+          <button type="button" class="btn-table-delete" data-id="${item.id}" title="Remove this record" style="margin-left: 6px; background: transparent; border: 1px solid var(--panel-border); color: var(--text-muted); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 11px; cursor: pointer;">
+            Delete
           </button>
         </td>
       </tr>

@@ -261,7 +261,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const isSpam = data.is_spam;
     verdictBanner.className = `verdict-banner ${isSpam ? "verdict-spam" : "verdict-ham"}`;
-    verdictTitle.textContent = isSpam ? "🚨 SPAM DETECTED" : "✅ LEGITIMATE EMAIL (HAM)";
+    verdictTitle.textContent = isSpam ? "SPAM DETECTED" : "LEGITIMATE EMAIL (HAM)";
     verdictTitle.style.color = isSpam ? "#f87171" : "#34d399";
 
     threatBadge.textContent = data.threat_level;
@@ -302,7 +302,7 @@ document.addEventListener("DOMContentLoaded", () => {
         triggersList.appendChild(badge);
       });
     } else {
-      triggersList.innerHTML = '<span class="clean-badge">✓ Clean message — No high-risk phishing/spam keywords detected.</span>';
+      triggersList.innerHTML = '<span class="clean-badge">Clean message — No high-risk phishing/spam keywords detected.</span>';
     }
 
     // Reasons List
@@ -347,7 +347,7 @@ ${d.reasons.map(r => "- " + r).join("\n")}
 ================================================`;
 
     navigator.clipboard.writeText(report).then(() => {
-      copyBtnText.textContent = "✓ Report Copied to Clipboard!";
+      copyBtnText.textContent = "Report Copied to Clipboard!";
       setTimeout(() => {
         copyBtnText.textContent = "Copy Full Security Report";
       }, 2500);
